@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 def browser():
     """Fixture to set up the testing environment before any tests run. Then tear it down after all tests have completed."""
     with sync_playwright() as p:
-        browser=p.chromium.launch(headless=False)
+        browser=p.webkit.launch(headless=False)
         yield browser
         browser.close()
     
