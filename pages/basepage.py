@@ -6,3 +6,6 @@ class BasePage:
     def getTitle(self)->str:
         title= self.page.title()
         return title
+    def getUrl(self)->str:
+        url=self.page.url()
+        return url
