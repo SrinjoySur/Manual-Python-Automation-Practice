@@ -1,6 +1,6 @@
 import re
 from playwright.sync_api import expect
-from pages.Homepage import HomePage
+from pages.homepage import HomePage
 def test_logoVisibility(page):
     home_page=HomePage(page)
     home_page.navigate()

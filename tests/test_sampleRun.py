@@ -1,6 +1,8 @@
 from playwright.sync_api import expect
-import pytest 
+from pages.basepage import BasePage
 import re
 def test_sample(page):
-    page.goto("https://automationexercise.com/")
-    expect(page).to_have_title(re.compile("Automation Exercise"))
+    base_page=BasePage(page)
+    base_page.navigate()
+    title=base_page.getTitle()
+    assert re.search("Automation Exercise",title)
