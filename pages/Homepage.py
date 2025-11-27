@@ -8,4 +8,5 @@ class HomePage(BasePage):
     def getLogoLocator(self)->Locator:
         element=self.page.get_by_alt_text(self.logo)
         return element
-    
+    def clickProductsPageLink(self):
+        self.page.get_by_text(self.productsPageLinkText).click()
